@@ -1,0 +1,124 @@
+.education {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, transparent, rgba(100, 200, 255, 0.05));
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #64c8ff, #667eea, transparent);
+}
+
+.education-item {
+  position: relative;
+  padding: 2rem;
+  background: rgba(100, 200, 255, 0.1);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.35rem;
+  top: 2.5rem;
+  width: 16px;
+  height: 16px;
+  background: #64c8ff;
+  border: 3px solid #0f0c29;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  background: rgba(100, 200, 255, 0.15);
+  border-color: rgba(100, 200, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(100, 200, 255, 0.2);
+}
+
+.education-item:hover .timeline-marker {
+  width: 24px;
+  height: 24px;
+  left: -2.65rem;
+  box-shadow: 0 0 15px rgba(100, 200, 255, 0.6);
+}
+
+.education-content h3 {
+  font-size: 1.5rem;
+  color: #64c8ff;
+  margin-bottom: 0.5rem;
+}
+
+.field {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.institution {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.education-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.year,
+.grade {
+  font-size: 0.95rem;
+  color: rgba(100, 200, 255, 0.8);
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.2);
+  border-radius: 20px;
+  border: 1px solid rgba(100, 200, 255, 0.3);
+}
+
+.reg-no {
+  font-size: 0.9rem;
+  color: rgba(100, 200, 255, 0.9);
+  padding: 0.5rem 1rem;
+  background: rgba(100, 200, 255, 0.15);
+  border-radius: 20px;
+  border: 1px solid rgba(100, 200, 255, 0.4);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .education-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: -1.85rem;
+  }
+
+  .education-item:hover .timeline-marker {
+    left: -2.15rem;
+  }
+}

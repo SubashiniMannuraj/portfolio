@@ -1,0 +1,32 @@
+.certifications {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, transparent, rgba(100, 200, 255, 0.05));
+}
+
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.cert-para {
+  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cert-para {
+    font-size: 0.95rem;
+  }
+}
