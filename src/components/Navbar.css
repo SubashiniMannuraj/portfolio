@@ -64,10 +64,60 @@
   color: #64c8ff;
 }
 
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  /* Hamburger transformation to X */
+  .bar.active:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .bar.active:nth-child(2) {
+    opacity: 0;
+  }
+  .bar.active:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .nav-menu {
-    gap: 1rem;
-    font-size: 0.9rem;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden on the right side */
+    width: 70%;
+    height: 100vh;
+    background: rgba(15, 12, 41, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: 0.4s ease-in-out;
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-menu.active {
+    right: 0; /* Slide in */
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
   }
 
   .navbar-logo {
